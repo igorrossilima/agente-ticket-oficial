@@ -54,3 +54,7 @@ if __name__ == "__main__":
     print("\n--- Testando com DeepSeek ---")
     resposta_deepseek = executar_agente_ia(pergunta, "deepseek")
     print(resposta_deepseek)
+
+    print("\n--- Testando com OpenAI ---")
+    resposta_openai = executar_agente_ia(pergunta, "openai")
+    print(resposta_openai)
