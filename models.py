@@ -36,14 +36,14 @@ class DeepseekModel(BaseLLM):
     
 class LLMFactory: # defini qual será a classe que irá trabalhar
     @staticmethod # permite chamar a classe sem antes precisar instanciar ela em uma variavel
-    def criar_modelo(nome_provedor: str) -> BaseLLM: # recebe um modelo que será usado em string e retorna em um formato BaseLLM
-        if nome_provedor.lower() == "gemini":
+    def criar_modelo(provedor_ia: str) -> BaseLLM: # recebe um modelo que será usado em string e retorna em um formato BaseLLM
+        if provedor_ia.lower() == "gemini":
             return GeminiModel()
         
-        if nome_provedor.lower() == "deepseek":
+        if provedor_ia.lower() == "deepseek":
             return DeepseekModel()
         
-        if nome_provedor.lower() == "openai":
+        if provedor_ia.lower() == "openai":
             return OpenAIModel()
         
-        raise ValueError(f"Provedor não surportado:/n{nome_provedor}")
+        raise ValueError(f"Provedor não surportado:/n{provedor_ia}")
