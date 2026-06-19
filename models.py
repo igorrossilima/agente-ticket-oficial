@@ -34,7 +34,7 @@ class DeepseekModel(BaseLLM):
         print("[Log] Chamando DeepseekModel...")
         return f"[Deepseek] Resposta baseada em:\n {prompt_usuario}"
     
-class LLMFactory: # defini qual será a classe que irá trabalhar
+class LLMFactory: # define qual será a classe que irá trabalhar
     @staticmethod # permite chamar a classe sem antes precisar instanciar ela em uma variavel
     def criar_modelo(provedor_ia: str) -> BaseLLM: # recebe um modelo que será usado em string e retorna em um formato BaseLLM
         if provedor_ia.lower() == "gemini":
